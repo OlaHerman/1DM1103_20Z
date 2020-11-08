@@ -58,7 +58,6 @@ int main(int argc, char *argv[])
 
     printf("(%d) ", wiersze_1);
     iloczyn(macierz,wektor,wiersze_1,wiersze_2);
-
+    
         return 0;
-
 }

@@ -8,7 +8,6 @@ int wczytaj_macierz(FILE *fin, float tablica[][100])
     int kolumny = 0;
     float liczba;
 
-
     fscanf(fin, "%d %d", &wiersze,&kolumny);
 
     for (int i=0; i<wiersze; i++)
@@ -36,7 +35,6 @@ void iloczyn(float macierz[][100], float wektor[][100], int wiersze_1, int wiers
         }
        printf("%f ", suma);
         suma= 0;
-
     }
     printf(" ]\n");
 }
@@ -58,7 +56,6 @@ int main(int argc, char *argv[])
 
     printf("(%d) ", wiersze_1);
     iloczyn(macierz,wektor,wiersze_1,wiersze_2);
-
+    
         return 0;
-
 }
