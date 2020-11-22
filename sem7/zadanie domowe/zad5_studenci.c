@@ -82,34 +82,3 @@ int wczytaj(student dane[100], char *fnazwa)
         }
         return ile_znalazlem;
     }
-
-
-
-
-    int znajdz_p(char *szukany_nr, char kod_przed[100][10], int n) 
-    {
-     int i;
-     for (i=0; i<n; i++) 
-        {
-            if (strcmp(szukany_nr, kod_przed[i]) == 0)
-
-                return i;
-        }
-            return -1;
-    }
-
-    int znajdz_przedmioty(char kod_przed[100][10], student dane[100], int n) 
-    {
-        int ile_znalazlem = 0;
-        int i;
-
-        for (i=0; i <n; i++) 
-        {
-            if (znajdz_p(dane[i].kod_przed, kod_przed, ile_znalazlem ) == -1) 
-            {
-                strncpy(kod_przed[ile_znalazlem], dane[i].kod_przed, 9);
-                ile_znalazlem++;
-            }
-        }
-        return ile_znalazlem;
-    }
