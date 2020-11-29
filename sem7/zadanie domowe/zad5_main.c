@@ -1,7 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-
 #include "zad5_studenci.h"
 #include "zad5_dziekanat.h"
 
@@ -22,7 +21,7 @@ int main (int argc, char **argv)
     }
     if (strcmp (argv[2],"student") ==0)
     {
-        znajdz_studentow(dane, ile);
+        najlepszy_student(dane, ile);
     }
     return 0;
 }

@@ -197,11 +197,11 @@ int main(int argc, char *argv[])
     else if(strcmp(argv[1], "multiply") == 0)
     {
         finA = fopen(argv[2], "r");
-        wczytaj(finA, &macA);
+        wczytaj(finA, &macA, k);
 
         if(argc == 3)
         {
-            printf( "wynik mnozenia macierzy z pliku %s = %f\n", argv[2], mnozenie_przez_skalar(macA,));
+            printf( "wynik mnozenia macierzy z pliku %s = %f\n", argv[2], mnozenie_przez_skalar(macA, k));
         }
         if(argc==4)
         {
