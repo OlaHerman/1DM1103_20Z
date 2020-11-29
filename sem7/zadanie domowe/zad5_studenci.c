@@ -81,4 +81,8 @@ int wczytaj(student dane[100], char *fnazwa)
             }  
         }
         return ile_znalazlem;
+<<<<<<< HEAD
     }
+=======
+    }
+>>>>>>> 6c509cf2c3ccf07b3113a15ba728b47e9604f297
