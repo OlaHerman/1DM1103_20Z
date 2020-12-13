@@ -49,9 +49,11 @@ SBaza * dodaj_studentow (SBaza * baza, char *imie, char *nazwisko, char *nr_albu
 void dodaj_przedmiot (SBaza * baza, char *kod_przed, char *nazwa_przed, char *sem);
 SBaza * dodaj_stud_do_przed(SBaza * baza, char *kod_przed, char *nr_albumu);
 void listuj_studentow(SBaza *baza);
+void listuj_studentow_od_konca(SBaza *baza);
 void zwolnij(SBaza *baza);
 void zwolnij_liste_studentow(Student *s);
 void zwolnij_liste_przedmiotow(Przedmiot *s);
 void zwolnij_liste_ocen(Ocena *s);
+Student * sortuj_przez_wybieranie(Student *glowa);
 
 #endif

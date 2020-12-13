@@ -51,7 +51,6 @@ SBaza * wczytaj_baze(char *nazwa_pliku)
         printf("BŁĄD! Nie moge otworzyc pliku: %s.\n", nazwa_pliku);
         exit(-1);
     }
-
     SBaza *baza = (SBaza*) malloc( sizeof(SBaza) );
     baza->lista_studentow = wczytaj_studentow(fin);
     baza-> lista_przedmiotow = wczytaj_przedmioty(fin);
@@ -92,14 +91,12 @@ Przedmiot * wczytaj_przedmioty(FILE *fin)
         s = strtok(NULL, "\n");
         prze->sem = (char*) malloc( sizeof(char) * (strlen(s) + 1));
         strcpy(prze->sem, s);
-
     }
-
     return glowa;
 }
 
-Ocena * wczytaj_oceny(FILE *fin) {
-
+Ocena * wczytaj_oceny(FILE *fin) 
+{
     char bufor[255];
     int n, i;
     char *s;
@@ -108,7 +105,8 @@ Ocena * wczytaj_oceny(FILE *fin) {
     fgets(bufor, 254, fin);
     sscanf(bufor, "%d", &n);
 
-    for (i=0; i<n; i++) {
+    for (i=0; i<n; i++) 
+    {
         Ocena *oce = (Ocena*) malloc(sizeof(Ocena));
         oce->nast = NULL;
 
@@ -128,9 +126,7 @@ Ocena * wczytaj_oceny(FILE *fin) {
         strcpy(oce->nr_albumu, s);
         
         s = strtok(NULL, ";");
-        
     }
-
     return glowa;
 }
 

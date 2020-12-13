@@ -18,3 +18,9 @@ test-ile: all
 
 test-memory: all
 	valgrind ./mydb baza.csv count_students
+
+test-od-konca: all
+	./mydb baza.csv list_students_from_end
+
+test-sortuj-malejaco: all
+	./mydb baza.csv sort_descending

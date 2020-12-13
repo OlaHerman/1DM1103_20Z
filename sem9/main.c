@@ -13,6 +13,17 @@ int main(int argc, char ** argv)
         listuj_studentow(baza);
     } 
 
+    else if (strcmp("list_students_from_end", argv[2]) == 0) 
+    {
+        listuj_studentow_od_konca(baza);
+    } 
+    
+    else if (strcmp("sort_descending", argv[2]) == 0) 
+    {
+        baza->lista_studentow = sortuj_przez_wybieranie(baza->lista_studentow); 
+        listuj_studentow(baza);
+    } 
+
     else if (strcmp("add_student", argv[2]) == 0) 
     {
         dodaj_studentow(baza, argv[3], argv[4], argv[5], argv[6]);
