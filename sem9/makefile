@@ -1,26 +1,20 @@
 all:
-	cc baza.c main.c -o mydb -Wall --pedantic
+	cc main.c polecenia.c mapa.c logika.c odpowiedz.c -lcurl -o projekt ../../cJSON/cjson.o
 
 test: all
-	./mydb baza.csv list_students
-
-test-dodstud: all
-	./mydb baza.csv add_student Kasia Nowak 007 cos@cos.pl
-  
-test-dodprzedmiot: all
-	./mydb baza.csv add_przedmiot 1DE2103 "Metody numeryczne" 2020Z
-  
-test-dodstuddoprzed: all
-	./mydb baza.csv add_stud_do_przed 1DE2103 007
-
-test-ile: all
-	./mydb baza.csv count_students
+	./projekt
 
 test-memory: all
-	valgrind ./mydb baza.csv count_students
+	valgrind ./projekt left
 
-test-od-konca: all
-	./mydb baza.csv list_students_from_end
+test-move: all
+	./projekt move
 
-test-sortuj-malejaco: all
-	./mydb baza.csv sort_descending
+test-left: all
+	./projekt left
+
+test-right: all
+	./projekt right
+
+test-explore: all
+	./projekt explore
